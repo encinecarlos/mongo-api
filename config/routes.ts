@@ -1,9 +1,11 @@
 module.exports = (app : any) => {
-    app.route('/')
+   app.route('/')
+      .get(() => console.log('app is running!'));
+   app.route('/clients')
        .get(app.api.clients.get) 
        .post(app.api.clients.post)
     
-    app.route('/:id')
+   app.route('/clients/:id')
        .put(app.api.clients.update)
        .delete(app.api.clients.destroy);
 }
