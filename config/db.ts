@@ -1,9 +1,10 @@
 import mongoose from 'mongoose';
 
+const MONGO_URI:string = process.env.MONGODB_URI!; 
+
 module.exports = () => {
-    const connectionString:any = process.env.MONGODB_URI;
     mongoose.connect(
-        connectionString,
+        MONGO_URI,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true

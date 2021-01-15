@@ -1,4 +1,5 @@
 import express from 'express';
+require('dotenv').config();
 const consign = require('consign');
 
 const app = express();
