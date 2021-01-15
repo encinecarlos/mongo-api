@@ -1,15 +1,14 @@
 import mongoose from 'mongoose';
 
 module.exports = () => {
+    const connectionString:any = process.env.MONGODB_URI;
     mongoose.connect(
-        "mongodb+srv://encinecarlos:c6u4CzXw49zs6E5@clusterapi0.v5eym.mongodb.net/avanade_node?retryWrites=true&w=majority",
+        connectionString,
         {
             useNewUrlParser: true,
             useUnifiedTopology: true
-        } 
+        }
     );
-    // mongoose.connect("mongodb://encinecarlos:c6u4CzXw49zs6E5@clusterapi0.v5eym.mongodb.net/avanade_node?retryWrites=true&w=majority", 
-    //     {useNewUrlParser: true, useUnifiedTopology: true});
 
     const db = mongoose.connection;
 
