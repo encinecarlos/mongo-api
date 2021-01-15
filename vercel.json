@@ -1,6 +1,12 @@
 {
     "name": "My-mongo-api",
     "version": 2,
+    "builds": [
+        {
+            "src": "./index.ts",
+            "use": "@vercel/node"
+        } 
+    ],
     "env": {
         "MONGODB_URI": "@mongo-uri"
     }
