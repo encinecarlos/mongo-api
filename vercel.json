@@ -1,6 +1,4 @@
-{
-    "name": "My-mongo-api",
-    "version": 2,
+{    
     "builds": [
         {
             "src": "./index.ts",

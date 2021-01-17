@@ -34,7 +34,7 @@ module.exports = (app : any) => {
         const updates = req.body;
         
         try {
-            const result = await Client.findOneAndUpdate(id, updates);
+            await Client.findOneAndUpdate(id, updates);
             res.status(200).json({message: 'updated'});
         } catch (error) {
             res.status(500).json(error);
